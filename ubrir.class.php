@@ -690,15 +690,15 @@ class Ubrir
     $ch=curl_init("https://twpg.ubrr.ru:8443/Exec");
     curl_setopt_array($ch,array(
       CURLOPT_POST=>1,
-		  CURLOPT_CAINFO=>dirname(__FILE__).DIRECTORY_SEPARATOR."certs".DIRECTORY_SEPARATOR."ubrir.crt",
-		  CURLOPT_SSL_VERIFYPEER=>1,
-		  CURLOPT_SSL_VERIFYHOST=>0,
-		  CURLOPT_SSLCERT=>dirname(__FILE__).DIRECTORY_SEPARATOR."certs".DIRECTORY_SEPARATOR."user.pem",
-		  CURLOPT_SSLKEY=>dirname(__FILE__).DIRECTORY_SEPARATOR."certs".DIRECTORY_SEPARATOR."user.key",
-		  CURLOPT_SSLKEYPASSWD=>$this->sert,
-		  CURLOPT_POSTFIELDS=>$xml,
-		  CURLOPT_RETURNTRANSFER=>1,
-		  CURLOPT_VERBOSE=>1,
+      CURLOPT_CAINFO=>dirname(__FILE__).DIRECTORY_SEPARATOR."certs".DIRECTORY_SEPARATOR."ubrir.crt",
+      CURLOPT_SSL_VERIFYPEER=>1,
+      CURLOPT_SSL_VERIFYHOST=>0,
+      CURLOPT_SSLCERT=>dirname(__FILE__).DIRECTORY_SEPARATOR."certs".DIRECTORY_SEPARATOR."user.pem",
+      CURLOPT_SSLKEY=>dirname(__FILE__).DIRECTORY_SEPARATOR."certs".DIRECTORY_SEPARATOR."user.key",
+      CURLOPT_SSLKEYPASSWD=>$this->sert,
+      CURLOPT_POSTFIELDS=>$xml,
+      CURLOPT_RETURNTRANSFER=>1,
+      CURLOPT_VERBOSE=>1,
     ));
     //curl_setopt($ch,CURLOPT_STDERR,$stdout);
     if(!$answer=curl_exec($ch))
